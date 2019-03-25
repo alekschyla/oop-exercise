@@ -21,16 +21,21 @@ function median (array) {
 }
 
 function minNumber(array) {
-    return Math.max.apply(null, array);
-}
-
-function maxNumber(array) {
     return Math.min.apply(null, array);
 }
 
+function maxNumber(array) {
+    return Math.max.apply(null, array);
+}
+
+function returnObject(array) {
+    return {
+        average: average(array),
+        median: median(array),
+        minNumber: minNumber(array),
+        maxNumber: maxNumber(array),
+    }
+}
 
 
-//console.log(average(myArray));
-//console.log(median(myArray));
-console.log(minNumber(myArray));
-console.log(maxNumber(myArray));
+console.log(returnObject(myArray));
