@@ -10,12 +10,27 @@ function sum(array) {
 
 function median (array) {
     array.sort(function(a,b) {return a - b;});
+
     const half = Math.floor(array.length / 2);
+
     if (array.length % 2 === 0) {
-        return array[half] + array[half - 1] / 2;
+        return (array[half] + array[half - 1]) / 2;
     }
+
     return array[half];
 }
 
-console.log(average(myArray));
-console.log(median(myArray));
+function minNumber(array) {
+    return Math.max.apply(null, array);
+}
+
+function maxNumber(array) {
+    return Math.min.apply(null, array);
+}
+
+
+
+//console.log(average(myArray));
+//console.log(median(myArray));
+console.log(minNumber(myArray));
+console.log(maxNumber(myArray));
